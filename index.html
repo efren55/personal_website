@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efren Mariscal | Data Scientist &amp; Data Analyst</title>
+  <meta name="description"
+    content="Portafolio personal de Data Scientist. Especialista en Análisis Predictivo y Ciencia de Datos." />
+
+  <!-- Tipografía: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       PATRÓN VISUAL: DEGRADADOS DIFUSOS ASIMÉTRICOS (MESH GRADIENT BLOBS)
+       ======================================================================== -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- ========================================================================
+       NAVEGACIÓN (MINIMALISTA, CENTRADA, LOGO CON PUNTO DE ACENTO)
+       ======================================================================== -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" aria-label="Navegación principal">
+      <!-- EDITAR: Tu nombre o marca personal -->
+      <a href="#inicio" class="logo">
+        Efren Mariscal<span class="logo-dot">.</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contacto" class="btn btn-primario">
+          <span>Hablemos</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         SECCIÓN HERO (DISEÑO ASIMÉTRICO + WIDGETS EN SUPERPOSICIÓN)
+         ====================================================================== -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Columna Izquierda: Contenido Principal -->
+          <div class="hero-content">
+            <!-- Indicador de Estado con círculo sólido -->
+            <div class="status-badge">
+              <span class="status-dot pulse" aria-hidden="true"></span>
+              <!-- EDITAR: Estado de disponibilidad -->
+              <span>Disponible para nuevos proyectos y roles</span>
+            </div>
+
+            <!-- H1 con palabras clave en acentoPrimario -->
+            <h1>
+              Transformando datos complejos en <span class="acento">decisiones inteligentes</span>.
+            </h1>
+
+            <!-- EDITAR: Resumen de presentación -->
+            <p class="hero-description">
+              Hola, soy <strong>Efren Mariscal</strong>, Data Scientist. Transformo datos complejos en modelos
+              predictivos y dashboards que impulsan la toma de decisiones.
+            </p>
+
+            <!-- Botones Primario (con flecha) y Secundario -->
+            <div class="hero-cta-group">
+              <a href="#proyectos" class="btn btn-primario">
+                <span>Ver portafolio</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <!-- EDITAR: Enlace a tu CV en PDF -->
+              <a href="#experiencia" class="btn btn-secundario">
+                <span>Explorar trayectoria</span>
+              </a>
+            </div>
+
+            <!-- Redes Sociales: SOLO LinkedIn, GitHub y Kaggle -->
+            <div class="hero-socials">
+              <span class="hero-socials-label">Encuéntrame en:</span>
+              <div class="social-icons-row">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/efren-mariscal-255a05405" target="_blank" rel="noopener noreferrer"
+                  class="btn-accion-circular" aria-label="LinkedIn" title="LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                  </svg>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/efren55" target="_blank" rel="noopener noreferrer"
+                  class="btn-accion-circular" aria-label="GitHub" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                  </svg>
+                </a>
+                <!-- Kaggle -->
+                <a href="https://www.kaggle.com/efrenmariscal" target="_blank" rel="noopener noreferrer"
+                  class="btn-accion-circular" aria-label="Kaggle" title="Kaggle">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.335z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Visual & Tarjetas Flotantes en Superposición -->
+          <div class="hero-visual">
+            <!-- Tarjeta Flotante Superior Izquierda (Superposición) -->
+            <div class="tarjeta-vidrio floating-widget floating-top-left">
+              <div class="widget-row">
+                <div class="widget-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="widget-value">ML &amp; IA</div>
+                  <div class="widget-caption">Modelos en producción</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Marco Principal -->
+            <div class="hero-main-frame">
+              <!-- Espacio para fotografía o avatar del Data Scientist -->
+              <div class="profile-placeholder">
+                <div class="profile-avatar-circle">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <img src="img/foto_perfil.jfif" alt="imagen_perfil">
+              </div>
+
+              <!-- Mini tarjeta interactiva de métricas de modelo -->
+              <div class="mini-chart-card">
+                <div class="mini-chart-header">
+                  <div>
+                    <span class="etiqueta">Rendimiento Predictivo</span>
+                    <h3 style="font-size: 1rem; margin-top: 2px;">Pipeline de Datos &amp; Inferencia</h3>
+                  </div>
+                  <span class="status-badge" style="padding: 4px 10px; font-size: 0.75rem;">
+                    <span class="status-dot"></span> Activo
+                  </span>
+                </div>
+                <div class="mini-bars" id="heroMiniBars" aria-label="Gráfico decorativo de barras">
+                  <div class="mini-bar" style="height: 45%;"></div>
+                  <div class="mini-bar" style="height: 62%;"></div>
+                  <div class="mini-bar" style="height: 55%;"></div>
+                  <div class="mini-bar active" style="height: 85%;"></div>
+                  <div class="mini-bar" style="height: 70%;"></div>
+                  <div class="mini-bar active" style="height: 94%;"></div>
+                  <div class="mini-bar" style="height: 78%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tarjeta Flotante Inferior Derecha (Superposición) -->
+            <div class="tarjeta-vidrio floating-widget floating-bottom-right">
+              <div class="widget-row">
+                <div class="widget-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="widget-value">End-to-End</div>
+                  <div class="widget-caption">Datos, Análisis y Despliegue</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN SOBRE MÍ & PILARES (TARJETAS DE VIDRIO + MÉTRICAS)
+         ====================================================================== -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <div class="about-wrapper">
+
+          <!-- Tarjeta Principal Sobre Mí -->
+          <div class="tarjeta-vidrio about-card-main">
+            <span class="etiqueta">Sobre mí</span>
+            <h2>Ciencia de datos con enfoque <span class="acento">humano y estratégico</span></h2>
+            <!-- EDITAR: Tu biografía profesional -->
+            <p>
+              Soy un Bioingeniero especializado en Análisis de Datos y Machine Learning con un enfoque práctico en la
+              resolución de problemas técnicos y de negocio. Mi experiencia abarca todo el ciclo de vida del dato: desde
+              la adquisición de información en tiempo real a través de sensores y sistemas IoT, hasta la construcción de
+              pipelines, procesamiento a gran escala y el despliegue de modelos predictivos y dashboards interactivos.
+            </p>
+            <p>
+              Me apasiona traducir preguntas ambiguas de negocio en experimentos rigurosos, modelos interpretables y
+              productos de datos escalables que cualquier equipo pueda entender y utilizar.
+            </p>
+
+            <div class="about-pillars">
+              <div class="pillar-item">
+                <span class="status-dot"></span>
+                <span>Desarrollo IoT &amp; Pipelines de Datos</span>
+              </div>
+              <div class="pillar-item">
+                <span class="status-dot"></span>
+                <span>Experimentación &amp; A/B Testing</span>
+              </div>
+              <div class="pillar-item">
+                <span class="status-dot"></span>
+                <span>Sistemas de Monitoreo Analítico</span>
+              </div>
+              <div class="pillar-item">
+                <span class="status-dot"></span>
+                <span>Análisis de Negocio e Insights</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cuadrícula de Indicadores / Resumen Cuantitativo -->
+          <div class="metrics-grid">
+            <div class="tarjeta-vidrio metric-card">
+              <!-- EDITAR: Tus cifras clave -->
+              <div class="metric-number">+2</div>
+              <div class="metric-title">Años de experiencia</div>
+              <p style="font-size: 0.85rem;">construyendo pipelines de datos, integrando sistemas IoT y entrenando
+                modelos predictivos.</p>
+            </div>
+
+            <div class="tarjeta-vidrio metric-card">
+              <div class="metric-number">+8</div>
+              <div class="metric-title">Proyectos completados</div>
+              <p style="font-size: 0.85rem;">Desde descubrimiento exploratorio hasta producción.</p>
+            </div>
+
+            <div class="tarjeta-vidrio metric-card">
+              <div class="metric-number">100%</div>
+              <div class="metric-title">Enfoque en impacto</div>
+              <p style="font-size: 0.85rem;">Métricas técnicas alineadas con objetivos de negocio.</p>
+            </div>
+
+            <div class="tarjeta-vidrio metric-card">
+              <div class="metric-number">+ Millones</div>
+              <div class="metric-title">Registros Procesados</div>
+              <p style="font-size: 0.85rem;">De sensores IoT, registros de movilidad en NYC y bases de datos
+                demográficas masivas.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN HABILIDADES TÉCNICAS (FILTRABLE CON JAVASCRIPT)
+         ====================================================================== -->
+    <section class="section" id="habilidades">
+      <div class="container">
+        <div class="section-header">
+          <span class="etiqueta">Stack Tecnológico</span>
+          <h2>Habilidades y <span class="acento">herramientas</span></h2>
+          <p>
+            Organizadas por dominio técnico para facilitar la lectura. Puedes filtrar cada área o explorar el stack
+            completo.
+          </p>
+        </div>
+
+        <!-- Filtros estilo píldora -->
+        <div class="skills-filter" role="tablist" aria-label="Filtrar habilidades por categoría">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todas</button>
+          <button class="filter-btn" data-filter="lenguajes" role="tab" aria-selected="false">Lenguajes &amp;
+            Core</button>
+          <button class="filter-btn" data-filter="ml" role="tab" aria-selected="false">Machine Learning &amp;
+            IA</button>
+          <button class="filter-btn" data-filter="datos" role="tab" aria-selected="false">Visualización &amp; Pipelines
+            de Datos</button>
+          <button class="filter-btn" data-filter="mlops" role="tab" aria-selected="false">Despliegue, Arquitectura &amp;
+            Cloud</button>
+        </div>
+
+        <!-- Grid de Categorías de Habilidades -->
+        <div class="skills-grid" id="skillsGrid">
+
+          <!-- Categoría 1: Lenguajes & Análisis -->
+          <article class="tarjeta-vidrio skill-category-card" data-category="lenguajes">
+            <div class="skill-card-top">
+              <div>
+                <span class="etiqueta">01 / Fundamentos</span>
+                <h3>Lenguajes &amp; Análisis Estadístico</h3>
+              </div>
+              <span class="status-dot" aria-hidden="true"></span>
+            </div>
+            <p>Análisis exploratorio de datos (EDA), manipulación a gran escala, ingeniería de características y
+              modelado predictivo.</p>
+
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="status-dot"></span>Python</span>
+              <span class="skill-pill"><span class="status-dot"></span>SQL</span>
+              <span class="skill-pill"><span class="status-dot"></span>Pandas</span>
+              <span class="skill-pill"><span class="status-dot"></span>NumPy</span>
+              <span class="skill-pill"><span class="status-dot"></span>Scikit-Learn</span>
+              <span class="skill-pill"><span class="status-dot"></span>PySpark</span>
+              <span class="skill-pill"><span class="status-dot"></span>Spark SQL</span>
+            </div>
+          </article>
+
+          <!-- Categoría 2: Machine Learning & Deep Learning -->
+          <article class="tarjeta-vidrio skill-category-card" data-category="ml">
+            <div class="skill-card-top">
+              <div>
+                <span class="etiqueta">02 / Modelado</span>
+                <h3>Machine Learning &amp; Deep Learning</h3>
+              </div>
+              <span class="status-dot" aria-hidden="true"></span>
+            </div>
+            <p>Entrenamiento de modelos predictivos (clasificación y regresión) e integración de Inteligencia Artificial
+              mediante LLMs y arquitecturas RAG.</p>
+
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="status-dot"></span>Scikit-Learn</span>
+              <span class="skill-pill"><span class="status-dot"></span>LangChain</span>
+              <span class="skill-pill"><span class="status-dot"></span>Hugging Face</span>
+              <span class="skill-pill"><span class="status-dot"></span>RAG</span>
+              <span class="skill-pill"><span class="status-dot"></span>spaCy</span>
+              <span class="skill-pill"><span class="status-dot"></span>LM Studio</span>
+            </div>
+          </article>
+
+          <!-- Categoría 3: Ingeniería de Datos & BI -->
+          <article class="tarjeta-vidrio skill-category-card" data-category="datos">
+            <div class="skill-card-top">
+              <div>
+                <span class="etiqueta">03 / Exploración &amp; BI</span>
+                <h3>Visualización &amp; Pipelines de Datos</h3>
+              </div>
+              <span class="status-dot" aria-hidden="true"></span>
+            </div>
+            <p>Transformación de datos crudos en tableros interactivos y pipelines de datos escalables para la toma de
+              decisiones.</p>
+
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="status-dot"></span>Streamlit</span>
+              <span class="skill-pill"><span class="status-dot"></span>Power BI</span>
+              <span class="skill-pill"><span class="status-dot"></span>Matplotlib / Seaborn</span>
+              <span class="skill-pill"><span class="status-dot"></span>PySpark</span>
+              <span class="skill-pill"><span class="status-dot"></span>Databricks</span>
+            </div>
+          </article>
+
+          <!-- Categoría 4: MLOps & Cloud -->
+          <article class="tarjeta-vidrio skill-category-card" data-category="mlops">
+            <div class="skill-card-top">
+              <div>
+                <span class="etiqueta">04 / Producción</span>
+                <h3>Despliegue, Arquitectura &amp; Cloud</h3>
+              </div>
+              <span class="status-dot" aria-hidden="true"></span>
+            </div>
+            <p>Despliegue de aplicaciones interactivas, configuración de servidores, integración IoT y gestión de bases
+              de datos en la nube y vectoriales.</p>
+
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="status-dot"></span>Firebase</span>
+              <span class="skill-pill"><span class="status-dot"></span>Google Cloud Storage</span>
+              <span class="skill-pill"><span class="status-dot"></span>ChromaDB</span>
+              <span class="skill-pill"><span class="status-dot"></span>Google BigQuery</span>
+              <span class="skill-pill"><span class="status-dot"></span>PWA & Web Bluetooth</span>
+              <span class="skill-pill"><span class="status-dot"></span>Databricks</span>
+              <span class="skill-pill"><span class="status-dot"></span>Git & GitHub</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN EXPERIENCIA Y EDUCACIÓN
+         ====================================================================== -->
+    <section class="section" id="experiencia">
+      <div class="container">
+        <div class="section-header">
+          <span class="etiqueta">Trayectoria</span>
+          <h2>Experiencia profesional y <span class="acento">formación</span></h2>
+          <p>
+            Un recorrido estructurado por mis roles previos, logros clave y formación académica.
+          </p>
+        </div>
+
+        <div class="experience-layout">
+
+          <!-- Columna Izquierda: Experiencia Laboral -->
+          <div class="timeline-column">
+            <h3 class="column-title">
+              <span class="status-dot"></span>
+              <span>Experiencia Laboral</span>
+            </h3>
+
+            <div class="timeline-list">
+              <!-- EDITAR: Puesto 1 -->
+              <article class="tarjeta-vidrio timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h4 class="timeline-role">Data Analyst & IoT Systems Developer</h4>
+                    <div class="timeline-company">AIA Puritec & S. de R.L de C.V</div>
+                  </div>
+                  <span class="status-badge">Ago 2022 — Ene 2025</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Desarrollo de modelos predictivos (Regresión Lineal y Random Forest) y análisis exploratorio de
+                    datos de sensores para optimizar la toma de decisiones operativas.</li>
+                  <li>Diseño e implementación de un pipeline de datos en tiempo real conectando dispositivos ESP32 con
+                    Firebase mediante una Progressive Web App (PWA).</li>
+                  <li>Automatización de la adquisición masiva de datos desde instrumentos oceanográficos (CTD) y
+                    sensores fisicoquímicos, visualizándolos en dashboards interactivos de Streamlit.</li>
+                </ul>
+                <div class="timeline-tech-row">
+                  <span class="tech-mini-badge">Python</span>
+                  <span class="tech-mini-badge">SQL</span>
+                  <span class="tech-mini-badge">Streamlit</span>
+                  <span class="tech-mini-badge">Scikit-Learn</span>
+                  <span class="tech-mini-badge">Firebase</span>
+                  <span class="tech-mini-badge">ESP32 / IoT</span>
+                </div>
+              </article>
+
+              <!-- EDITAR: Puesto 2 -->
+              <article class="tarjeta-vidrio timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h4 class="timeline-role">Laboratory Technician</h4>
+                    <div class="timeline-company">AIA Puritec & S. de R.L de C.V</div>
+                  </div>
+                  <span class="status-badge">Abr 2022 — Ago 2022</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Ejecución de análisis fisicoquímicos de laboratorio para medir indicadores de calidad del agua y
+                    sedimentos.</li>
+                  <li>Generación y estructuración de conjuntos de datos confiables utilizados para el monitoreo
+                    ambiental.</li>
+                </ul>
+                <div class="timeline-tech-row">
+                  <span class="tech-mini-badge">Recolección de Datos</span>
+                  <span class="tech-mini-badge">Análisis de Laboratorio</span>
+                  <span class="tech-mini-badge">Monitoreo Ambiental</span>
+                </div>
+              </article>
+
+              <!-- EDITAR: Puesto 3 -->
+              <article class="tarjeta-vidrio timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h4 class="timeline-role">Agricultural Technician</h4>
+                    <div class="timeline-company">Comité de Sanidad Vegetal de Baja California</div>
+                  </div>
+                  <span class="status-badge">Nov 2021 — Ene 2022</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Participación en la campaña operativa para el control y erradicación del piojo harinoso de la vid
+                    (mealybug).</li>
+                </ul>
+                <div class="timeline-tech-row">
+                  <span class="tech-mini-badge">Trabajo de Campo</span>
+                  <span class="tech-mini-badge">Agricultura</span>
+                  <span class="tech-mini-badge">Monitoreo</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Educación y Certificaciones -->
+          <div class="timeline-column">
+            <h3 class="column-title">
+              <span class="status-dot"></span>
+              <span>Educación &amp; Certificaciones</span>
+            </h3>
+
+            <div class="timeline-list">
+              <!-- <article class="tarjeta-vidrio">
+                <span class="etiqueta">Posgrado / Especialidad</span>
+                <h4 class="timeline-role" style="margin-top: 6px;">Maestría en Ciencia de Datos / IA</h4>
+                <div class="timeline-company" style="margin-bottom: 8px;">Nombre de la Universidad · 2022 — 2024</div>
+                <p style="font-size: 0.92rem;">
+                  Enfoque en aprendizaje estadístico, redes neuronales profundas y optimización matemática.
+                </p>
+              </article> -->
+
+              <article class="tarjeta-vidrio">
+                <span class="etiqueta">Ingeniería</span>
+                <h4 class="timeline-role" style="margin-top: 6px;">Bioingeniería</h4>
+                <div class="timeline-company" style="margin-bottom: 8px;">Universidad Autónoma de Baja California (UABC)
+                  - Ensenada · Feb 2017 — Dic 2022</div>
+                <p style="font-size: 0.92rem;">
+                  Especialización en Análisis de Datos.
+                </p>
+              </article>
+
+              <article class="tarjeta-vidrio">
+                <span class="etiqueta">Formación Continua</span>
+                <h4 class="timeline-role" style="margin-top: 6px;">Certificaciones y Comunidad</h4>
+                <ul class="timeline-bullets" style="margin-bottom: 0;">
+                  <li>Certificación "Aprende SQL" abarcando consultas avanzadas (CTEs, Subconsultas), funciones de
+                    ventana y ecosistemas SQLite/MySQL.</li>
+                  <li>Participación activa en resolución de retos y proyectos en la plataforma Kaggle.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN PROYECTOS (COMPONENTE TARJETA PORTAFOLIO)
+         Layout: Imagen superior con bordes redondeados (20px),
+                 texto inferior con botón circular de acción (40x40px)
+         ====================================================================== -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <div class="section-header">
+          <span class="etiqueta">Portafolio</span>
+          <h2>Proyectos <span class="acento">destacados</span></h2>
+          <p>
+            Casos de estudio seleccionados. Haz clic en el botón de acción circular de cada tarjeta para ver los
+            detalles técnicos.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Proyecto 1 -->
+          <article class="tarjeta-portafolio">
+            <div>
+              <div class="project-image-box">
+                <span class="project-category-badge">NLP &amp; LLMs</span>
+                <!-- Ilustración vectorial limpia representativa de Ciencia de Datos -->
+                <svg width="120" height="80" viewBox="0 0 120 80" fill="none" aria-hidden="true">
+                  <rect x="10" y="45" width="16" height="25" rx="4" fill="#FFFFFF" fill-opacity="0.7" />
+                  <rect x="34" y="30" width="16" height="40" rx="4" fill="#FFFFFF" fill-opacity="0.85" />
+                  <rect x="58" y="18" width="16" height="52" rx="4" fill="#297796" />
+                  <rect x="82" y="8" width="16" height="62" rx="4" fill="#FFFFFF" />
+                  <path d="M18 40 L42 25 L66 15 L90 6" stroke="#297796" stroke-width="3" stroke-linecap="round" />
+                  <circle cx="90" cy="6" r="5" fill="#297796" />
+                </svg>
+              </div>
+
+              <div class="project-body">
+                <h3>Asistente IA con RAG: Ley Federal del Trabajo</h3>
+                <p>
+                  Chatbot interactivo que responde consultas sobre la legislación laboral de México mediante un sistema
+                  de Generación Aumentada por Recuperación (RAG). Desarrollado con LangChain, ChromaDB y la API de
+                  OpenAI, y desplegado en Streamlit Cloud.
+                </p>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <span class="project-metrics-tag">
+                <span class="status-dot"></span>
+                <span>Streamlit · Pandas · LangChain · Seaborn · Matplotlib · RAG &amp; ChromaDB</span>
+              </span>
+              <button class="btn-accion-circular project-modal-trigger" data-project="0"
+                aria-label="Ver detalles del proyecto Predicción de Abandono">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="tarjeta-portafolio">
+            <div>
+              <div class="project-image-box">
+                <span class="project-category-badge">AI & Data Analytics</span>
+                <svg width="120" height="80" viewBox="0 0 120 80" fill="none" aria-hidden="true">
+                  <circle cx="35" cy="40" r="18" fill="#FFFFFF" fill-opacity="0.85" />
+                  <circle cx="85" cy="24" r="12" fill="#297796" />
+                  <circle cx="85" cy="58" r="12" fill="#FFFFFF" />
+                  <line x1="51" y1="34" x2="74" y2="26" stroke="#297796" stroke-width="2.5" />
+                  <line x1="51" y1="46" x2="74" y2="54" stroke="#297796" stroke-width="2.5" />
+                </svg>
+              </div>
+
+              <div class="project-body">
+                <h3>Análisis de Tendencias con Google Trends e IA</h3>
+                <p>
+                  Pipeline de análisis de datos y NLP aplicado al dataset de Google Trends Hourly (BigQuery) para
+                  evaluar los términos más buscados de la semana. Desarrollado con Pandas, Matplotlib y Seaborn para
+                  exploración visual, y enriquecido con LangChain, Gemini API, modelos de Hugging Face y Lingua para el
+                  procesamiento de texto.
+                </p>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <span class="project-metrics-tag">
+                <span class="status-dot"></span>
+                <span>Langchain · SQL · BigQuery · Pandas · Seaborn · Matplotlib · Lingua &amp; Hugging Face</span>
+              </span>
+              <button class="btn-accion-circular project-modal-trigger" data-project="1"
+                aria-label="Ver detalles del proyecto Análisis de Sentimiento">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="tarjeta-portafolio">
+            <div>
+              <div class="project-image-box">
+                <span class="project-category-badge">AI & Data Analytics</span>
+                <svg width="120" height="80" viewBox="0 0 120 80" fill="none" aria-hidden="true">
+                  <path d="M10 60 Q 30 25, 50 45 T 90 20 L 110 12" stroke="#297796" stroke-width="3.5" fill="none"
+                    stroke-linecap="round" />
+                  <path d="M10 60 Q 30 25, 50 45 T 90 20 L 110 12 L 110 70 L 10 70 Z" fill="#FFFFFF"
+                    fill-opacity="0.45" />
+                  <circle cx="50" cy="45" r="4.5" fill="#297796" />
+                  <circle cx="90" cy="20" r="4.5" fill="#297796" />
+                </svg>
+              </div>
+
+              <div class="project-body">
+                <h3>Análisis de Movilidad Urbana en NYC</h3>
+                <p>
+                  Procesamiento y análisis a gran escala de millones de registros del dataset de taxis de NYC para
+                  evaluar patrones de demanda y uso del transporte por distrito. Desarrollo de pipelines de Big
+                  Data utilizando Databricks, PySpark y Spark SQL, integrando LangChain y realizando análisis
+                  exploratorio (EDA) con Pandas, Matplotlib y Seaborn.
+                </p>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <span class="project-metrics-tag">
+                <span class="status-dot"></span>
+                <span>Pandas · LangChain · DataBricks · PySpark · SparkSQL · Seaborn &lt; Matplotlib</span>
+              </span>
+              <button class="btn-accion-circular project-modal-trigger" data-project="2"
+                aria-label="Ver detalles del proyecto Pronóstico de Demanda">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="projects-cta">
+          <a href="https://github.com/efren55" target="_blank" rel="noopener noreferrer" class="btn btn-primario">
+            <span>Ver más proyectos</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN CONTACTO
+         ====================================================================== -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="contact-banner">
+
+          <!-- Información y Redes Sociales -->
+          <div>
+            <span class="etiqueta">Contacto</span>
+            <h2 style="margin: 10px 0 16px;">¿Tienes un reto de datos o una <span class="acento">oportunidad
+                laboral</span>?</h2>
+            <p>
+              Estoy abierto a conversar sobre roles como Data Scientist, proyectos de consultoría o colaboraciones en
+              investigación aplicada.
+            </p>
+
+            <!-- EDITAR: Tus datos de contacto -->
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <span class="status-dot"></span>
+                <span>Nombre de Empresa/Usuario</span>
+              </div>
+              <div class="contact-info-item">
+                <span class="status-dot"></span>
+                <span>Ciudad, País (Disponible solo en remoto)</span>
+              </div>
+            </div>
+
+            <!-- Redes Sociales: SOLO LinkedIn, GitHub y Kaggle -->
+            <div class="hero-socials">
+              <span class="hero-socials-label">Redes:</span>
+              <div class="social-icons-row">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/efren-mariscal-255a05405" target="_blank" rel="noopener noreferrer"
+                  class="btn-accion-circular" aria-label="LinkedIn" title="LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                  </svg>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/efren55" target="_blank" rel="noopener noreferrer"
+                  class="btn-accion-circular" aria-label="GitHub" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                  </svg>
+                </a>
+                <!-- Kaggle -->
+                <a href="https://www.kaggle.com/efrenmariscal" target="_blank" rel="noopener noreferrer"
+                  class="btn-accion-circular" aria-label="Kaggle" title="Kaggle">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.335z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="nombre">Nombre o Empresa</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o empresa" required maxlength="100" />
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre el proyecto o vacante..."
+                required maxlength="2000"></textarea>
+            </div>
+
+            <!-- Menú desplegable para que elija dónde quiere redactar el correo -->
+            <div class="form-group">
+              <label for="proveedorCorreo">Abrir y enviar usando:</label>
+              <select id="proveedorCorreo" name="proveedorCorreo"
+                style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid #ccc; background: inherit; color: inherit;">
+                <option value="gmail">Gmail (Navegador Web)</option>
+                <option value="outlook">Outlook / Hotmail (Navegador Web)</option>
+                <option value="default">Aplicación de correo del dispositivo (Celular / App PC)</option>
+              </select>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn btn-primario" style="width: 100%;">
+              <span id="submitBtnText">Continuar a mi correo</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER (CON ICONOS DE LINKEDIN, GITHUB Y KAGGLE ÚNICAMENTE)
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="#inicio" class="logo">
+          Efren Mariscal<span class="logo-dot">.</span>
+        </a>
+        <p style="font-size: 0.88rem; margin-top: 4px;">
+          © <span id="currentYear">2026</span> Efren Mariscal · Portafolio de Ciencia de Datos.
+        </p>
+      </div>
+
+      <div class="social-icons-row" aria-label="Redes sociales">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/efren-mariscal-255a05405" target="_blank" rel="noopener noreferrer"
+          class="btn-accion-circular" aria-label="LinkedIn" title="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+          </svg>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/efren55" target="_blank" rel="noopener noreferrer" class="btn-accion-circular"
+          aria-label="GitHub" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+          </svg>
+        </a>
+        <!-- Kaggle -->
+        <a href="https://www.kaggle.com/efrenmariscal" target="_blank" rel="noopener noreferrer"
+          class="btn-accion-circular" aria-label="Kaggle" title="Kaggle">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.335z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL INTERACTIVO DE DETALLE DE PROYECTO
+       ======================================================================== -->
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="btn-accion-circular modal-close" id="modalClose" aria-label="Cerrar ventana">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <span class="etiqueta" id="modalCategory">Categoría</span>
+      <h3 id="modalTitle" style="margin: 8px 0 12px; font-size: 1.5rem;">Título del Proyecto</h3>
+      <p id="modalDescription" style="margin-bottom: 16px;">Descripción detallada del proyecto.</p>
+
+      <div style="margin-bottom: 20px;">
+        <span class="etiqueta" style="display: block; margin-bottom: 8px;">Resultados &amp; Metodología</span>
+        <ul class="timeline-bullets" id="modalHighlights"></ul>
+      </div>
+
+      <div class="timeline-tech-row" id="modalTech" style="margin-bottom: 24px;"></div>
+
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="https://github.com/tu-usuario" id="modalRepoLink" target="_blank" rel="noopener noreferrer"
+          class="btn btn-primario">
+          <span>Ver código en GitHub</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <button type="button" class="btn btn-secundario" id="modalSecondaryClose">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+
+</html>
