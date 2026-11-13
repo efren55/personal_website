@@ -9,47 +9,46 @@
 document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
      1. DATOS DE PROYECTOS PARA EL MODAL DETALLADO
-     EDITAR: Personaliza aquí la información detallada de cada proyecto.
      ========================================================================== */
   const PROJECTS_DATA = [
     {
-      category: 'Machine Learning · Clasificación',
-      title: 'Predicción de Abandono de Clientes (Churn)',
+      category: 'NLP & LLMs · Sistemas RAG',
+      title: 'Asistente IA con RAG: Ley Federal del Trabajo',
       description:
-        'Desarrollo de un sistema end-to-end para detectar clientes con alta probabilidad de cancelar su suscripción, permitiendo al equipo comercial intervenir de forma proactiva.',
+        'Chatbot interactivo que responde consultas sobre la legislación laboral de México mediante un sistema de Generación Aumentada por Recuperación (RAG). Desarrollado con LangChain, ChromaDB y la API de OpenAI, y desplegado en Streamlit Cloud.',
       highlights: [
-        'Ingeniería de variables sobre histórico transaccional y comportamiento de uso.',
-        'Entrenamiento y optimización de XGBoost logrando un ROC-AUC de 0.91 en validación temporal.',
-        'Integración de valores SHAP para explicar los factores de riesgo individuales de cada cliente.'
+        'Indexación semántica de la Ley Federal del Trabajo de México en una base vectorial ChromaDB.',
+        'Orquestación de consultas contextuales mediante LangChain y modelos de OpenAI para respuestas precisas.',
+        'Interfaz conversacional desplegada en Streamlit Cloud accesible para consulta inmediata.'
       ],
-      tech: ['Python', 'XGBoost', 'Scikit-Learn', 'SHAP', 'SQL', 'Docker'],
-      repoUrl: 'https://github.com/tu-usuario'
+      tech: ['Streamlit', 'Pandas', 'LangChain', 'Seaborn', 'Matplotlib', 'RAG & ChromaDB'],
+      repoUrl: 'https://github.com/efren55'
     },
     {
-      category: 'NLP & LLMs · Procesamiento de Texto',
-      title: 'Análisis Inteligente de Reseñas y Sentimiento',
+      category: 'AI & Data Analytics · BigQuery & NLP',
+      title: 'Análisis de Tendencias con Google Trends e IA',
       description:
-        'Pipeline automatizado de Procesamiento de Lenguaje Natural para clasificar miles de comentarios de usuarios, detectar urgencias y resumir hallazgos clave.',
+        'Pipeline de análisis de datos y NLP aplicado al dataset de Google Trends Hourly (BigQuery) para evaluar los términos más buscados de la semana. Desarrollado con Pandas, Matplotlib y Seaborn para exploración visual, y enriquecido con LangChain, Gemini API, modelos de Hugging Face y Lingua para el procesamiento de texto.',
       highlights: [
-        'Fine-tuning de modelos basados en Transformers para clasificación multietiqueta.',
-        'Clustering semántico mediante embeddings para descubrir tópicos emergentes sin supervisión.',
-        'Despliegue de una API REST ligera en FastAPI para inferencia en tiempo real.'
+        'Extracción y agregación de series temporales de búsqueda desde Google Trends Hourly en BigQuery mediante SQL.',
+        'Clasificación lingüística y enriquecimiento semántico con Lingua, Hugging Face, LangChain y Gemini API.',
+        'Visualización analítica de patrones semanales de interés con Pandas, Matplotlib y Seaborn.'
       ],
-      tech: ['Python', 'PyTorch', 'Hugging Face', 'FastAPI', 'Plotly'],
-      repoUrl: 'https://github.com/tu-usuario'
+      tech: ['LangChain', 'SQL', 'BigQuery', 'Pandas', 'Seaborn', 'Matplotlib', 'Lingua & Hugging Face'],
+      repoUrl: 'https://github.com/efren55'
     },
     {
-      category: 'Series de Tiempo · Forecasting',
-      title: 'Motor de Pronóstico de Demanda Multivariado',
+      category: 'AI & Data Analytics · Big Data & Movilidad',
+      title: 'Análisis de Movilidad Urbana en NYC',
       description:
-        'Arquitectura de pronóstico a nivel tienda-producto para optimizar niveles de inventario y reducir quiebres de stock en cadenas de suministro.',
+        'Procesamiento y análisis a gran escala de millones de registros del dataset de taxis de NYC para evaluar patrones de demanda y uso del transporte por distrito. Desarrollo de pipelines de Big Data utilizando Databricks, PySpark y Spark SQL, integrando LangChain y realizando análisis exploratorio (EDA) con Pandas, Matplotlib y Seaborn.',
       highlights: [
-        'Incorporación de regresores exógenos: calendario promocional, precios y clima.',
-        'Reducción del error porcentual absoluto medio (MAPE) por debajo del 6.5%.',
-        'Tablero interactivo de seguimiento para comparar predicciones vs. demanda real.'
+        'Procesamiento distribuido de millones de viajes en Databricks utilizando PySpark y consultas optimizadas en Spark SQL.',
+        'Análisis exploratorio (EDA) de demanda horaria, estacionalidad y flujos entre distritos de Nueva York.',
+        'Integración de LangChain y visualizaciones estadísticas con Pandas, Matplotlib y Seaborn para comunicar hallazgos clave.'
       ],
-      tech: ['Python', 'LightGBM', 'Statsmodels', 'Pandas', 'Streamlit'],
-      repoUrl: 'https://github.com/tu-usuario'
+      tech: ['Pandas', 'LangChain', 'Databricks', 'PySpark', 'Spark SQL', 'Seaborn', 'Matplotlib'],
+      repoUrl: 'https://github.com/efren55'
     }
   ];
 
@@ -146,9 +145,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalRepoLink = document.getElementById('modalRepoLink');
   const projectTriggers = document.querySelectorAll('.project-modal-trigger');
 
-  const openProjectModal = (projectIndex) => {
+  let lastFocusedTrigger = null;
+
+  const openProjectModal = (projectIndex, triggerElement) => {
     const project = PROJECTS_DATA[projectIndex];
     if (!project || !modal) return;
+
+    lastFocusedTrigger = triggerElement || document.activeElement;
 
     modalCategory.textContent = project.category;
     modalTitle.textContent = project.title;
@@ -177,18 +180,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
+
+    if (modalClose) {
+      modalClose.focus();
+    }
   };
 
   const closeProjectModal = () => {
     if (!modal) return;
     modal.classList.remove('open');
     document.body.style.overflow = '';
+
+    if (lastFocusedTrigger && typeof lastFocusedTrigger.focus === 'function') {
+      lastFocusedTrigger.focus();
+      lastFocusedTrigger = null;
+    }
   };
 
   projectTriggers.forEach((trigger) => {
     trigger.addEventListener('click', () => {
       const index = Number(trigger.getAttribute('data-project'));
-      openProjectModal(index);
+      openProjectModal(index, trigger);
     });
   });
 
@@ -210,21 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     6. MICRO-INTERACCIÓN EN BARRAS DEL HERO
-     ========================================================================== */
-  const heroMiniBars = document.getElementById('heroMiniBars');
-  if (heroMiniBars) {
-    heroMiniBars.addEventListener('mouseenter', () => {
-      const bars = heroMiniBars.querySelectorAll('.mini-bar');
-      bars.forEach((bar) => {
-        const randomHeight = Math.floor(Math.random() * 55) + 40;
-        bar.style.height = `${randomHeight}%`;
-      });
-    });
-  }
-
-  /* ==========================================================================
-     7. FORMULARIO DE CONTACTO Y AÑO ACTUAL
+     6. FORMULARIO DE CONTACTO Y AÑO ACTUAL
      ========================================================================== */
 
 
